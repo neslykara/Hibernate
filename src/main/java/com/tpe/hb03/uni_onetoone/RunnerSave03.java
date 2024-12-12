@@ -1,10 +1,9 @@
-package com.hb03.uni_onetoone;
+package com.tpe.hb03.uni_onetoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.exception.spi.Configurable;
 
 public class RunnerSave03
 {

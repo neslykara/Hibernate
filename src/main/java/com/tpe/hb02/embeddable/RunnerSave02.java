@@ -1,11 +1,10 @@
-package com.hb02.embeddable;
+package com.tpe.hb02.embeddable;
 
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.exception.spi.Configurable;
 
 public class RunnerSave02
 {

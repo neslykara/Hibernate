@@ -1,4 +1,4 @@
-package com.hb02.embeddable;
+package com.tpe.hb02.embeddable;
 
 
 import org.hibernate.Session;

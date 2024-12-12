@@ -1,4 +1,4 @@
-package com.hb03.uni_onetoone;
+package com.tpe.hb03.uni_onetoone;
 
 import javax.persistence.*;
 

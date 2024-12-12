@@ -1,44 +1,30 @@
-package com.hb02.embeddable;
+package com.tpe.hb04.bi_onetoone;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="t_student02")
-public class Student02
-{
+@Table(name = "t_student04")
+public class Student04 {
+
     @Id
     private Integer id;
-    @Column(name = "std_name",nullable = false, unique = true,length = 50)
+
+    @Column(name = "std_name",nullable = false,unique = true,length = 50)
     private String name;
-    private  int grade;
 
- //  private String street;
- //  private String city;
- //  private String country;
- //  private String zipcode;
-    @Embedded
-    private Address address;
+    private int grade;
 
 
+    @OneToOne(mappedBy = "student")
+    private Diary04 diary;
 
-    //cont.
-    public Student02() {
-    }
-
-    public Student02(Integer id, String name, int grade) {
+    public Student04(Integer id, String name, int grade) {
         this.id = id;
         this.name = name;
         this.grade = grade;
     }
 
-    //getter-setter
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
+    public Student04() {
     }
 
     public Integer getId() {
@@ -65,15 +51,20 @@ public class Student02
         this.grade = grade;
     }
 
-    //toString
+    public Diary04 getDiary() {
+        return diary;
+    }
+
+    public void setDiary(Diary04 diary) {
+        this.diary = diary;
+    }
 
     @Override
     public String toString() {
-        return "Student02{" +
+        return "Student04{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", grade=" + grade +
-                ", address=" + address +
                 '}';
     }
 }
